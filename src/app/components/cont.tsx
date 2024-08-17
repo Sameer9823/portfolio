@@ -1,7 +1,6 @@
 import React from "react";
 import { Vortex } from "../../app/components/ui/vortex";
-import { Button } from "./ui/moving-border";
-import { Link } from "@nextui-org/react";
+
 import { MovingBorderDemo } from "./button";
 
 export function VortexDemo() {
