@@ -17,7 +17,7 @@ export default function App() {
     <Navbar className="w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border shadow-lg fixed z-30">
       <NavbarBrand className="flex items-center">
         <Image src={LOGO} alt="Logo" className="w-12 h-auto" />
-        <span className="ml-2 font-bold">MyBrand</span>
+       
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
