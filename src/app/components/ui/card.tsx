@@ -5,7 +5,7 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import image from '../../../ASSETS/lms.png';
 import img from '../../../ASSETS/music.png';
-import img1 from '../../../ASSETS/github.png'
+import img1 from '../../../ASSETS/aisaas.png'
 import ing3 from '../../../ASSETS/blog.jpeg'
 import {Button} from "@nextui-org/react";
 import Link from "next/link";
@@ -189,7 +189,7 @@ export function ThreeDCardDemo() {
           translateZ="50"
           className="text-xl font-bold text-neutral-800 dark:text-white"
         >
-          GitHub Image Viewer
+          AI Integrated SAAS
         </CardItem>
         
         <CardItem translateZ="100" className="w-full mt-4">
@@ -206,10 +206,16 @@ export function ThreeDCardDemo() {
           className="text-xl flex gap-4 mt-3 font-bold text-neutral-600 dark:text-white"
         >
           <Button color="primary" variant="bordered" className="text-black border-[black]">
-        React.js
+        Next.js
       </Button>  
           <Button color="primary" variant="bordered" className="text-black border-[black]">
-          Tailwindcss
+        Cloudinary AI
+      </Button>  
+          <Button color="primary" variant="bordered" className="text-black border-[black]">
+        Prisma
+      </Button>  
+          <Button color="primary" variant="bordered" className="text-black border-[black]">
+        NEONDB
       </Button>  
          
           
@@ -219,7 +225,7 @@ export function ThreeDCardDemo() {
          
          <div className="text-center">
 
-             <Link href="https://github-avatar.netlify.app/">
+             <Link href="https://github.com/Sameer9823/Cloudinary-SaaS">
              
          <CardItem
            translateZ={20}
