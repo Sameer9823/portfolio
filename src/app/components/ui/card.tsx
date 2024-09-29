@@ -132,7 +132,7 @@ export function ThreeDCardDemo() {
 
     </div>
     <div className="flex justify-center lg:gap-5 flex-wrap mt-[-4rem] lg:w-auto ">
-    <div>
+    
 <CardContainer className="inter-var">
       <CardBody className="bg-gradient-to-r from-pink-500 to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
         <CardItem
@@ -182,7 +182,9 @@ export function ThreeDCardDemo() {
        </div>
       </CardBody>
     </CardContainer>
-</div>
+
+
+
     <CardContainer className="inter-var">
       <CardBody className="bg-gradient-to-r from-pink-500 to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
         <CardItem
@@ -203,7 +205,7 @@ export function ThreeDCardDemo() {
         </CardItem>
         <CardItem
           translateZ="50"
-          className="text-xl flex gap-4 mt-3 font-bold text-neutral-600 dark:text-white"
+          className="text-xl flex flex-wrap gap-4 mt-3 font-bold text-neutral-600 dark:text-white"
         >
           <Button color="primary" variant="bordered" className="text-black border-[black]">
         Next.js
@@ -239,6 +241,7 @@ export function ThreeDCardDemo() {
        </div>
       </CardBody>
     </CardContainer>
+
    
 
     </div>
