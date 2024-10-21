@@ -49,7 +49,7 @@ export default function App() {
             as={Link}
             className="bg-gradient-to-r from-amber-400 to-pink-500 hover:text-white border"
             variant="flat"
-            href="https://www.papermark.io/view/clzye287s0001h2shcxlo8ng0"
+            href="https://www.papermark.io/view/cm2ivgkaw0001sa1owjt267eb"
           > 
             Resume
           </Button>
