@@ -2,249 +2,87 @@
 
 import Image from "next/image";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-import image from '../../../ASSETS/lms.png';
-import img from '../../../ASSETS/music.png';
-import img1 from '../../../ASSETS/aisaas.png'
-import ing3 from '../../../ASSETS/blog.jpeg'
-import {Button} from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import Link from "next/link";
 
-export function ThreeDCardDemo() {
+// Import images correctly
+import image from "../../../ASSETS/lms.png";
+import img from "../../../ASSETS/music.png";
+import img1 from "../../../ASSETS/aisaas.png";
+import ing3 from "../../../ASSETS/blog.jpeg";
+
+// Data for projects
+const projects = [
+  {
+    title: "Learning Management System",
+    image: image,
+    techStack: ["React.js", "MongoDB", "Express.js", "Node.js"],
+    link: "https://github.com/Sameer9823/Learning-Management-System",
+  },
+  {
+    title: "Blog Application",
+    image: ing3,
+    techStack: ["React.js", "Tailwind CSS", "Appwrite"],
+    link: "https://everydayvibes.netlify.app/",
+  },
+  {
+    title: "Master the Art Of Music",
+    image: img,
+    techStack: ["Next.js", "Aceternity.ui"],
+    link: "https://github.com/Sameer9823/Music-School-Application",
+  },
+  {
+    title: "AI Integrated SaaS",
+    image: img1,
+    techStack: ["Next.js", "Cloudinary AI", "Prisma", "NEONDB"],
+    link: "https://github.com/Sameer9823/Cloudinary-SaaS",
+  },
+];
+
+export function ProjectShowcase() {
   return (
-    <div className="lg:flex-none flex-1 justify-center items-center">
-
-    <div className="flex lg:gap-5 justify-center flex-wrap items-center gap-1 lg:w-auto ">
-        <div>
-
-    <CardContainer className="inter-var w-auto">
-      <CardBody className="bg-gradient-to-r from-pink-500 to-yellow-500 border-[1px] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">
-      <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-800 dark:text-white"
+    <div className="flex flex-wrap justify-center gap-8 p-8">
+      {projects.map((project, index) => (
+        <div
+          key={index}
+          className="bg-gray-800 dark:bg-gray-700 shadow-lg rounded-xl p-6 w-[20rem] sm:w-[25rem] hover:scale-105 transition-transform"
         >
-          Learning Management System
-        </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
-          <Image
-            src={image}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <CardItem
-          translateZ="50"
-          className="text-xl flex gap-4 mt-3 font-bold text-neutral-600 dark:text-white flex-wrap"
-        >
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        React.js
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        MongoDB
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        Express.js
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        Node.js
-      </Button>  
+          {/* Project Title */}
+          <h2 className="text-2xl font-bold text-white text-center">{project.title}</h2>
 
-        </CardItem>
-        <div className="flex justify-center items-center mt-10">
-         
-          <div className="text-center">
+          {/* Project Image */}
+          <div className="mt-4">
+            <Image
+              src={project.image}
+              height={500}
+              width={500}
+              className="h-52 w-full object-cover rounded-xl shadow-lg"
+              alt={project.title}
+            />
+          </div>
 
-              <Link href="https://github.com/Sameer9823/Learning-Management-System">
-              
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            View Project
-          </CardItem>
-              </Link>
+          {/* Tech Stack */}
+          <div className="flex flex-wrap justify-center gap-2 mt-4">
+            {project.techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="bg-black dark:bg-white dark:text-black text-white px-3 py-1 rounded-full text-xs font-semibold"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* Project Link */}
+          <div className="flex justify-center mt-6">
+            <Link href={project.link} target="_blank">
+              <Button color="primary" variant="solid" className="bg-white text-black px-6 py-2 rounded-lg font-bold">
+                View Project
+              </Button>
+            </Link>
           </div>
         </div>
-      </CardBody>
-    </CardContainer>
-        </div>
-
-        <div>
-        <CardContainer className="inter-var">
-      <CardBody className="bg-gradient-to-r from-pink-500 to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-800 dark:text-white"
-        >
-          Blog Application
-        </CardItem>
-        
-        <CardItem translateZ="100" className="w-full mt-4">
-          <Image
-            src={ing3}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <CardItem
-          translateZ="50"
-          className="text-xl flex gap-4 mt-3 font-bold text-neutral-600 dark:text-white flex-wrap"
-        >
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        ReactJS
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-          Tailwindcss
-      </Button>  
-         
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-          Appwrite
-      </Button>  
-         
-          
-
-        </CardItem>
-        <div className="flex justify-center items-center mt-10">
-         
-         <div className="text-center">
-
-             <Link href="https://everydayvibes.netlify.app/">
-             
-         <CardItem
-           translateZ={20}
-           as="button"
-           className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-         >
-           View Project
-         </CardItem>
-             </Link>
-         </div>
-       </div>
-      </CardBody>
-    </CardContainer>
-        </div>
-
-
-    </div>
-    <div className="flex justify-center lg:gap-5 flex-wrap mt-[-4rem] lg:w-auto ">
-    
-<CardContainer className="inter-var">
-      <CardBody className="bg-gradient-to-r from-pink-500 to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-800 dark:text-white"
-        >
-          Master the Art Of Music
-        </CardItem>
-        
-        <CardItem translateZ="100" className="w-full mt-4">
-          <Image
-            src={img}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <CardItem
-          translateZ="50"
-          className="text-xl flex gap-4 mt-3 font-bold text-neutral-600 dark:text-white"
-        >
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        Next.js
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-          Aceternity.ui
-      </Button>  
-          
-
-        </CardItem>
-        <div className="flex justify-center items-center mt-10">
-         
-         <div className="text-center">
-
-             <Link href="https://github.com/Sameer9823/Music-School-Application">
-             
-         <CardItem
-           translateZ={20}
-           as="button"
-           className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-         >
-           View Project
-         </CardItem>
-             </Link>
-         </div>
-       </div>
-      </CardBody>
-    </CardContainer>
-
-
-
-    <CardContainer className="inter-var">
-      <CardBody className="bg-gradient-to-r from-pink-500 to-yellow-500 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-800 dark:text-white"
-        >
-          AI Integrated SAAS
-        </CardItem>
-        
-        <CardItem translateZ="100" className="w-full mt-4">
-          <Image
-            src={img1}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <CardItem
-          translateZ="50"
-          className="text-xl flex flex-wrap gap-4 mt-3 font-bold text-neutral-600 dark:text-white"
-        >
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        Next.js
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        Cloudinary AI
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        Prisma
-      </Button>  
-          <Button color="primary" variant="bordered" className="text-black border-[black]">
-        NEONDB
-      </Button>  
-         
-          
-
-        </CardItem>
-        <div className="flex justify-center items-center mt-10">
-         
-         <div className="text-center">
-
-             <Link href="https://github.com/Sameer9823/Cloudinary-SaaS">
-             
-         <CardItem
-           translateZ={20}
-           as="button"
-           className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-         >
-           View Project
-         </CardItem>
-             </Link>
-         </div>
-       </div>
-      </CardBody>
-    </CardContainer>
-
-   
-
-    </div>
+      ))}
     </div>
   );
 }

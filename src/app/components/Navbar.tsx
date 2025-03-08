@@ -22,22 +22,22 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#home" className="hover:text-gray-600">
+          <Link color="foreground" href="#home" className="text-gray-100">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#about" className="hover:text-gray-600">
+          <Link color="foreground" href="#about" className="text-gray-100">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#project" className="hover:text-gray-600">
+          <Link color="foreground" href="#project" className="text-gray-100">
             Project
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#contact" className="hover:text-gray-600">
+          <Link color="foreground" href="#contact" className="text-gray-100">
             Contact
           </Link>
         </NavbarItem>
