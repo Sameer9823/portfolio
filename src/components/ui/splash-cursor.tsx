@@ -24,7 +24,7 @@ function SplashCursor({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    function pointerPrototype() {
+    function pointerPrototype(this: any) {
       this.id = -1;
       this.texcoordX = 0;
       this.texcoordY = 0;
